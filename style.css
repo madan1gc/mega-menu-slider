@@ -145,6 +145,7 @@ button {
   .site-header .main-header .menu {
     display: flex;
     gap: 16px;
+    padding: 0 20px;
   }
 }
 .site-header .main-header .menu_item {

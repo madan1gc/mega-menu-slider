@@ -88,6 +88,12 @@ button {
   padding-block: 8px;
   background-color: #0F234C;
   color: #fff;
+  transition: 0.5s ease-in-out;
+}
+.notification-bar.close {
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
 }
 @media screen and (max-width: 1024px) {
   .notification-bar {

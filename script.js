@@ -28,11 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const notiClose = document.querySelector('.btn-close')
 
+    console.log(notiClose);
+
     const closeNotification = () => {
         notiClose.addEventListener('click', () => {
-            document.querySelector('.notification-bar').classList.add('.close')
+            document.querySelector('.notification-bar').classList.add('close')
+            console.log('clicked');
         })
     }
+    closeNotification()
+
 
     // Open submenu
     const menuItems = document.querySelectorAll('.menu_item.has-sub-menu');

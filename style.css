@@ -88,12 +88,13 @@ button {
   padding-block: 8px;
   background-color: #0F234C;
   color: #fff;
+  display: grid;
+  grid-template-rows: 1fr;
   transition: 0.5s ease-in-out;
 }
 .notification-bar.close {
-  transform: translateY(-100%);
-  opacity: 0;
-  visibility: hidden;
+  grid-template-rows: 0fr;
+  padding-block: 0;
 }
 @media screen and (max-width: 1024px) {
   .notification-bar {
@@ -108,6 +109,7 @@ button {
   font-style: italic;
   font-weight: 300;
   line-height: 1.5;
+  overflow: hidden;
 }
 .notification-bar_content .btn-close {
   position: absolute;

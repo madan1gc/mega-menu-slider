@@ -1,0 +1,119 @@
+.main-content {
+    margin-block: clamp(40px, 5vw, 75px);
+
+
+    @media screen and (min-width:1025px) {
+        .accordion-slider {
+            display: flex;
+            gap: 25px;
+        }
+    }
+
+    .title {
+        font-size: clamp(40px, 5vw, 64px);
+        line-height: 1;
+        font-weight: 400;
+        padding-bottom: clamp(24px, 5vw, 64px);
+        position: relative;
+        border-bottom: 1px solid #CCCEB7;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background-color: #CCCEB7;
+        }
+    }
+
+    .thumbnail {
+
+        padding-block: 16px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #CCCEB7;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 1.1;
+            color: inherit;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        &:not(.is-active) {
+            color: #CCCEB7;
+
+            h3 {
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+
+        .hide-text {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s ease-in-out;
+            font-size: $font-size-medium;
+            line-height: 1.25;
+
+            >* {
+                overflow: hidden
+            }
+        }
+
+        &.is-active {
+            .hide-text {
+                grid-template-rows: 1fr;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 40%;
+
+        .reminder {
+
+            @media screen and (max-width:1024px) {
+
+                margin-top: 32px;
+            }
+
+            h4 {
+                font-size: $font-size-medium;
+                margin-bottom: 8px;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: $font-size-small;
+            }
+        }
+    }
+
+    .media {
+        flex-basis: 60%;
+
+        @media screen and (max-width:1024px) {
+
+            margin-bottom: 22px;
+        }
+
+        video {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        iframe {
+            max-width: 100%;
+
+        }
+    }
+}

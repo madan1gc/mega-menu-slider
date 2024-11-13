@@ -1,0 +1,98 @@
+@import "../utils/variables";
+
+// Reset
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Base styles
+body {
+    font-family: $primary-font;
+    font-size: $font-size;
+    color: $font-color;
+    background-color: $background-color;
+    position: relative;
+    height: 100%;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    color: $font-color-dark;
+    font-family: $secondary-font;
+}
+
+// Links
+a {
+    text-decoration: none;
+}
+
+// Images
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+
+// Button styling
+.btn-primary {
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+    padding: $spacing-small $spacing-medium;
+    border-radius: $border-radius;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.container {
+    width: min(100% - 30px, $container-width);
+    margin: 0 auto;
+}
+
+// splide js
+.splide__arrows {
+
+    @media screen and (max-width:1024px) {
+        display: none;
+
+    }
+
+    .splide__arrow {
+        top: -25px;
+        background: none;
+
+        &.splide__arrow--prev {
+            left: auto;
+            right: 62px;
+        }
+
+        &.splide__arrow--next {
+            right: 42px;
+        }
+
+    }
+}
